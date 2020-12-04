@@ -32,25 +32,22 @@ def part2(geoMap):
         xPosition = 0
         yPosition = 0
 
-        while yPosition < mapLength - 1:
+        while yPosition < mapLength - 1:  # Subtract 1 b/c yPosition is index zero
             xPosition = (xPosition + slope[0]) % mapWidth
             yPosition += slope[1]
-            # print(xPosition, yPosition)
-
-            # if yPosition > mapLength - 1:
-            #     break
 
             if geoMap[yPosition][xPosition] == '#':
                 treesEncountered += 1
         
         treesEncounteredMultiplier.append(treesEncountered)
 
-    print(treesEncounteredMultiplier)
+    # Multiply all trees encountered for each slope
     result = 1
     for i in treesEncounteredMultiplier:
         result *= i
 
     return result
 
-# print(part1(input))
+
+print(part1(input))
 print(part2(input))
