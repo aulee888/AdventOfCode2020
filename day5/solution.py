@@ -67,8 +67,6 @@ def part2(takenSeats):
 
     return 'No Solution'
 
-# print(sample)
-# print(rowSeat(sample[0], 0, 127))
-# print(columnSeat('RLR', 0, 7))
+
 print(part1(input))
 print(part2(input))
